@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+session.setAttribute("isLoggedIn", true); 
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>メニュー</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+         .menu {
+            width: 200px;
+            margin: 20px; 
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left; 
+        }
+        .menu a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color:  #000;
+            padding: 10px;
+            background-color:#c8e6c9;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #a5d6a7;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h2>メニュー</h2>
+        <a href="SearchProduct?isFromMenu=true">商品検索</a>
+        <a href="AddProduct?isFromMenu=true">商品登録</a>
+        <a href="AddSales?isFromMenu=true">売上登録</a>
+        <a href="DownloadCSV?isFromMenu=true">CSVダウンロード</a>
+    </div>
+</body>
+</html>
