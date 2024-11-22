@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-session.setAttribute("isLoggedIn", true); 
-%>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -42,10 +38,10 @@ session.setAttribute("isLoggedIn", true);
 <body>
     <div class="menu">
         <h2>メニュー</h2>
-        <a href="SearchProduct?isFromMenu=true">商品検索</a>
-        <a href="AddProduct?isFromMenu=true">商品登録</a>
-        <a href="AddSales?isFromMenu=true">売上登録</a>
-        <a href="DownloadCSV?isFromMenu=true">CSVダウンロード</a>
+        <a href="SearchProduct.html?isFromMenu=true">商品検索</a>
+        <a href="AddProduct.html?isFromMenu=true">商品登録</a>
+        <a href="AddSales.html?isFromMenu=true">売上登録</a>
+        <a href="DownloadCSV.html?isFromMenu=true">CSVダウンロード</a>
     </div>
 </body>
 </html>
