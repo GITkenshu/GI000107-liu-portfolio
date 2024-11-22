@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>商品検索</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var successMessage = "";  <!-- 此处可以根据需要手动设置成功信息 -->
+            if (successMessage.trim() !== "") {
+                alert(successMessage);
+            }
+        };
+    </script>
+</head>
+<body>
+    <h2 style="text-align: left">商品検索</h2>
+    <br>
+    <form action="SearchProduct.html" method="get">  <!-- 将 action 改为静态的 html 文件 -->
+        <input type="hidden" name="isFromMenu" value="true">
+        商品名 <input type="text" name="productName" value="">
+        <input type="submit" value="検索"> <br>
+
+        <!-- 手动填充的错误信息 -->
+        <div style="color: red;">
+            <!-- 此处可以手动填充错误信息 -->
+        </div>
+        <br>
+        <table border="1">
+            <tr>
+                <th>商品コード</th>
+                <th>商品名</th>
+                <th>単価</th>
+                <th>操作</th>
+            </tr>
+
+            <!-- 这里手动填充商品列表 -->
+            <tr>
+                <td style="text-align: center; width: 100">001</td>
+                <td style="text-align: center; width: 100">商品A</td>
+                <td style="text-align: center; width: 250">1000円</td>
+                <td style="text-align: center; width: 100">
+                    <a href="EditProduct.html?productCode=001&productName=商品A&price=1000&updateTime=2024-11-22T12:00:00&isFromSearch=true&isFromMenu=true">編集</a>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; width: 100">002</td>
+                <td style="text-align: center; width: 100">商品B</td>
+                <td style="text-align: center; width: 250">2000円</td>
+                <td style="text-align: center; width: 100">
+                    <a href="EditProduct.html?productCode=002&productName=商品B&price=2000&updateTime=2024-11-22T12:00:00&isFromSearch=true&isFromMenu=true">編集</a>
+                </td>
+            </tr>
+            <!-- 如果没有商品，显示如下 -->
+            <tr>
+                <td colspan="4">商品が見つかりませんでした。</td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <button type="button" onclick="location.href='index.html';">メニューへ戻る</button>
+    <br><br>
+</body>
+</html>
